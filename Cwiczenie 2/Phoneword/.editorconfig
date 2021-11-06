@@ -1,0 +1,4 @@
+﻿[*.cs]
+
+# CS0006: Nie można znaleźć pliku metadanych „C:\Users\zareb\source\repos\Cwiczenie 2\Phoneword\Phoneword\Phoneword\bin\Debug\netstandard2.0\ref\Phoneword.dll”
+dotnet_diagnostic.CS0006.severity = none
