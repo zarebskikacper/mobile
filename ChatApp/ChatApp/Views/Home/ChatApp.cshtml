@@ -1,0 +1,29 @@
+﻿@model User
+
+@{
+    ViewBag.Title = $"Chat app - {Model?.Imie} {Model?.Nazwisko}";
+    Layout = "_Layout";
+}
+
+<p>
+    Jesteś zalogowany jako: <span id="user-login">@Model?.Imie @Model?.Nazwisko</span>
+</p>
+
+<div class="row">
+    <div class="col-md-8">
+        <input id="chat-message" class="form-control" placeholder="Wiadomość..." />
+    </div>
+    <div class="col-md-4">
+        <button id="btn-send" class="btn btn-success w-100">Wyślij</button>
+    </div>
+</div>
+
+<div class="col-12" >
+    <ul id="chat-container">
+
+    </ul>
+</div>
+
+@section Scripts{
+    <script src="~/js/site.js" aspp-append-version="true"></script>
+}
