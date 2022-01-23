@@ -6,12 +6,14 @@ namespace ChatApp.Controllers;
 public class HomeController : Controller
 {
     private readonly ILogger<HomeController> _logger;
+    private readonly IWebHostEnvironment _environment;
     public const string SessionKeyImie = "USER_SESSION_IMIE";
     public const string SessionKeyNazwisko = "USER_SESSION_NAZWISKO";
 
-    public HomeController(ILogger<HomeController> logger)
+    public HomeController(ILogger<HomeController> logger, IWebHostEnvironment environment)
     {
         _logger = logger;
+        _environment = environment;
     }
 
     [HttpGet]
@@ -84,5 +86,55 @@ public class HomeController : Controller
     public IActionResult Error()
     {
         return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+    }
+
+    public IActionResult Capture()
+    {
+        return View();
+    }
+
+    [HttpPost]
+    public IActionResult Capture(string name)
+    {
+        try
+        {
+            var files = HttpContext.Request.Form.Files;
+            if (files != null)
+            {
+                foreach (var file in files)
+                {
+                    if (file.Length > 0)
+                    {
+                        var fileName = file.FileName;
+                        var myUniqueFileName = Convert.ToString(Guid.NewGuid());
+                        var fileExtension = Path.GetExtension(fileName);
+                        var newFileName = string.Concat(myUniqueFileName, fileExtension);
+                        var filePath = Path.Combine(_environment.WebRootPath,"Photos") + $@"\{newFileName}";
+                        if (!string.IsNullOrEmpty(filePath))
+                        {
+                            StoreInFolder(file, filePath);
+
+                        }
+                    }
+                }
+                return Json(true);
+            }
+            else
+            {
+                return Json(false);
+            }
+        }
+        catch (Exception ex)
+        {
+            throw;
+        }
+    }
+    private void StoreInFolder(IFormFile file, string fileName)
+    {
+        using (FileStream fs = System.IO.File.Create(fileName))
+        {
+            file.CopyTo(fs);
+            fs.Flush();
+        }
     }
 }

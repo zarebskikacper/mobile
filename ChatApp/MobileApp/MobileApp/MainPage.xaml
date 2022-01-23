@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="MobileApp.MainPage">
+    <ScrollView>
+        <StackLayout Orientation="Vertical">
+            
+            <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
+                <Label Text="Funkcjonalności" HorizontalTextAlignment="Center" TextColor="White" FontSize="36" />
+            </Frame>
+
+            <Label x:Name="Bateria" Text="100%" FontSize="Title"/>
+            <Button Text="Wybierz zdjęcie" Clicked="Button_Clicked" />
+            <Button Text="Zrób zdjęcie" Clicked="Button1_Clicked" />
+            <Button Text="Wybierz kontakt" Clicked="Button2_Clicked" />
+            <Button Text="Poznaj swoją lokalizację" Clicked="Button3_Clicked" />
+            <Button Text="Przestań pobierać lokalizację" Clicked="Button4_Clicked" />
+            <Entry x:Name="Znacznik" Placeholder="Wpisz lokalizację lub miejsce" />
+            <Button Text="Miejsce na Lokalizację" Clicked="Button5_Clicked"/>
+            <Button Text="Lokalizacja na Miejsce" Clicked="Button6_Clicked"/>
+            <Button Text="Rozpocznij/Zatrzymaj Nagrywanie" Clicked="Button7_Clicked"/>
+            <Button Text="Odtwórz nagranie" Clicked="Button8_Clicked"/>
+            <Button Text="Odcisk palca" Clicked="Button9_Clicked"/>
+            <Button Text="Obsługa PDF" Clicked="Button10_Clicked"/>
+            <Image x:Name="Zdjęcie" />
+            <Label x:Name="Kontakty"/>
+            <Label x:Name="Lokalizacja"/>
+
+        </StackLayout>
+    </ScrollView>
+</ContentPage>
