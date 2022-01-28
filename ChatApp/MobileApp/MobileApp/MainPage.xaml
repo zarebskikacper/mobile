@@ -1,29 +1,70 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="MobileApp.MainPage">
     <ScrollView>
-        <StackLayout Orientation="Vertical">
+        <StackLayout Orientation="Vertical" BackgroundColor="CornflowerBlue">
             
             <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
                 <Label Text="Funkcjonalności" HorizontalTextAlignment="Center" TextColor="White" FontSize="36" />
             </Frame>
 
-            <Label x:Name="Bateria" Text="100%" FontSize="Title"/>
-            <Button Text="Wybierz zdjęcie" Clicked="Button_Clicked" />
-            <Button Text="Zrób zdjęcie" Clicked="Button1_Clicked" />
-            <Button Text="Wybierz kontakt" Clicked="Button2_Clicked" />
-            <Button Text="Poznaj swoją lokalizację" Clicked="Button3_Clicked" />
-            <Button Text="Przestań pobierać lokalizację" Clicked="Button4_Clicked" />
-            <Entry x:Name="Znacznik" Placeholder="Wpisz lokalizację lub miejsce" />
-            <Button Text="Miejsce na Lokalizację" Clicked="Button5_Clicked"/>
-            <Button Text="Lokalizacja na Miejsce" Clicked="Button6_Clicked"/>
-            <Button Text="Rozpocznij/Zatrzymaj Nagrywanie" Clicked="Button7_Clicked"/>
-            <Button Text="Odtwórz nagranie" Clicked="Button8_Clicked"/>
-            <Button Text="Odcisk palca" Clicked="Button9_Clicked"/>
-            <Button Text="Obsługa PDF" Clicked="Button10_Clicked"/>
-            <Image x:Name="Zdjęcie" />
-            <Label x:Name="Kontakty"/>
-            <Label x:Name="Lokalizacja"/>
+            <Label Style="{StaticResource Labels}" x:Name="Bateria" Text="100%"/>
+
+            <Button Style="{StaticResource Buttons}" Text="Wybierz zdjęcie" Clicked="Button_Clicked" />
+            <Button Style="{StaticResource Buttons}" Text="Zrób zdjęcie" Clicked="Button1_Clicked" />
+            <Button Style="{StaticResource Buttons}" Text="Wybierz kontakt" Clicked="Button2_Clicked" />
+            <Button Style="{StaticResource Buttons}" Text="Poznaj swoją lokalizację" Clicked="Button3_Clicked" />
+            <Button Style="{StaticResource Buttons}" Text="Przestań pobierać lokalizację" Clicked="Button4_Clicked" />
+            
+            <Entry x:Name="Znacznik" Placeholder="Wpisz lokalizację lub miejsce" TextColor="White"/>
+
+            <Button Style="{StaticResource Buttons}" Text="Miejsce na Lokalizację" Clicked="Button5_Clicked"/>
+            <Button Style="{StaticResource Buttons}" BackgroundColor="#2196F3" Text="Lokalizacja na Miejsce" Clicked="Button6_Clicked"/>
+            <Button Style="{StaticResource Buttons}" Text="Rozpocznij/Zatrzymaj Nagrywanie" Clicked="Button7_Clicked"/>
+            <Button Style="{StaticResource Buttons}" Text="Odtwórz nagranie" Clicked="Button8_Clicked"/>
+            <Button Style="{StaticResource Buttons}" Text="Odcisk palca" Clicked="Button9_Clicked"/>
+            <Button Style="{StaticResource Buttons}" Text="Obsługa PDF" Clicked="Button10_Clicked"/>
+            
+            <Image x:Name="Zdjęcie"/>
+            <Label Style="{StaticResource Labels}" x:Name="Kontakty" TextColor="White"/>
+            <Label Style="{StaticResource Labels}" x:Name="Lokalizacja" TextColor="White"/>
 
         </StackLayout>
     </ScrollView>
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="Buttons" TargetType="Button">
+                <Setter Property="CornerRadius" Value="40"/>
+                <Setter Property="BorderColor" Value="White"/>
+                <Setter Property="BorderWidth" Value="1"/>
+                <Setter Property="TextColor" Value="White"/>
+                <Setter Property="BackgroundColor" Value="#2196F3"/>
+                <Setter Property="WidthRequest" Value="300"/>
+                <Setter Property="HorizontalOptions" Value="Center"/>
+                
+            </Style>
+
+            <Style x:Key="Labels" TargetType="Label">
+                <Setter Property="TextColor" Value="White"/>
+                <Setter Property="Margin" Value="0,20"/>
+            </Style>
+
+            <Style x:Key="Grad" TargetType="StackLayout">
+                <Setter Property="Background">
+                    <Setter.Value>
+                        <LinearGradientBrush StartPoint="0,1" EndPoint="1,1">
+                            <GradientBrush.GradientStops>
+                                <GradientStopCollection>
+                                    <GradientStop Color="Blue" Offset="0.1"/>
+                                    <GradientStop Color="Green" Offset="0.3"/>
+                                    <GradientStop Color="Red" Offset="0.6"/>
+                                    <GradientStop Color="Orange" Offset="1.0"/>
+                                </GradientStopCollection>
+                            </GradientBrush.GradientStops>
+                        </LinearGradientBrush>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+            
+        </ResourceDictionary>
+    </ContentPage.Resources>
 </ContentPage>

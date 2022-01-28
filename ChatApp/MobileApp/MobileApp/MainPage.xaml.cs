@@ -30,7 +30,23 @@ namespace MobileApp
 
             Bateria.Text = (Battery.ChargeLevel * 100).ToString() + "%";
             Battery.BatteryInfoChanged += Battery_BatteryInfoChanged;
+
+            //Task.Run(Animacja);
         }
+
+        /*private async void Animacja()
+        {
+            Action<double> forward = input => Tlo.AnchorY = input;
+            Action<double> backward = input => Tlo.AnchorY = input;
+
+            while(true)
+            {
+                Tlo.Animate(name: "forward", callback: forward, start: 0, end: 2, length: 5000, easing: Easing.SinIn);
+                await Task.Delay(5000);
+                Tlo.Animate(name: "backward", callback: backward, start: 0, end: 2, length: 5000, easing: Easing.SinIn);
+                await Task.Delay(5000);
+            }
+        }*/
 
         private void Battery_BatteryInfoChanged(object sender, BatteryInfoChangedEventArgs e)
         {

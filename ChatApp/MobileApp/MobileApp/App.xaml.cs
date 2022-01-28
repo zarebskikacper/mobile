@@ -11,6 +11,7 @@ namespace MobileApp
             InitializeComponent();
 
             MainPage = new MainPage();
+            Device.SetFlags(new string[] { "Brush_Experimental" });
         }
 
         protected override void OnStart()
