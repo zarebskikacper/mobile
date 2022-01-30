@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MobileApp.Views.Localization">
+    <ContentPage.Content>
+        <StackLayout Style="{StaticResource Back}">
+
+            <Frame Style="{StaticResource Frame}">
+                <Label Style="{StaticResource Lab}" 
+                       Text="Funkcje lokalizacji" />
+            </Frame>
+
+            <Button Style="{StaticResource Buttons}" 
+                    Text="Poznaj swoją lokalizację" 
+                    Clicked="Button_Clicked" />
+            <Button Style="{StaticResource Buttons}" 
+                    Text="Przestań pobierać lokalizację" 
+                    Clicked="Button1_Clicked" />
+
+            <Entry x:Name="Znacznik" 
+                   Placeholder="Wpisz lokalizację lub miejsce" 
+                   TextColor="White"/>
+            
+            <Button Style="{StaticResource Buttons}" 
+                    Text="Miejsce na Lokalizację" 
+                    Clicked="Button2_Clicked"/>
+            
+            <Button Style="{StaticResource Buttons}" 
+                    Text="Lokalizacja na Miejsce" 
+                    Clicked="Button3_Clicked"/>
+            <Button Style="{StaticResource Buttons}" 
+                    Text="Otwórz mapę miejsca" 
+                    Clicked="Button4_Clicked"/>
+
+            <Label Style="{StaticResource Labels}" 
+                   x:Name="LabelInfo" 
+                   TextColor="White"/>
+        
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

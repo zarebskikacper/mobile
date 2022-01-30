@@ -7,10 +7,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Azure.Storage.Blobs" Version="12.11.0-beta.2" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor" Version="2.2.0" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="6.0.1" />
     <PackageReference Include="Microsoft.AspNetCore.SignalR.Core" Version="1.1.0" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.1" />
+    <PackageReference Include="WindowsAzure.Storage" Version="9.3.3" />
+    <PackageReference Include="Xam.Plugin.Media" Version="5.0.1" />
   </ItemGroup>
 
   <ItemGroup>

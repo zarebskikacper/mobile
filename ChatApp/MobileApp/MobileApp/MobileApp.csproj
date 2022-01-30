@@ -11,10 +11,37 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Azure.Storage.Blobs" Version="12.11.0-beta.2" />
     <PackageReference Include="Plugin.AudioRecorder" Version="1.1.0" />
     <PackageReference Include="Plugin.Fingerprint" Version="2.1.5" />
+    <PackageReference Include="WindowsAzure.Storage" Version="9.3.3" />
+    <PackageReference Include="Xam.Plugin.Media" Version="5.0.1" />
     <PackageReference Include="Xamarin.Forms" Version="5.0.0.2337" />
     <PackageReference Include="Xamarin.Essentials" Version="1.7.1" />
     <PackageReference Include="Xamarin.Forms.SaveOpenPDFPackage" Version="1.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Views\AudioRecord.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\AzureStorage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\ContactViews.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\KolkoKrzyzyk.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Localization.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\PhotoPicker.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\SimpleThings.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
 </Project>

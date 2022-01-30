@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MobileApp.Views.ContactViews">
+    <ContentPage.Content>
+        <StackLayout Style="{StaticResource Back}">
+
+            <Frame Style="{StaticResource Frame}">
+                <Label Text="Kontakty" Style="{StaticResource Lab}" />
+            </Frame>
+
+            <Button Style="{StaticResource Buttons}"
+                    Text="Wybierz kontakt"
+                    Clicked="Button_Clicked"/>
+
+            <Entry x:Name="Kontakty" 
+                   Placeholder="Numer Telefonu" 
+                   TextColor="White"/>
+
+            <Entry x:Name="AddressEmail"
+                   Placeholder="Adres Email"
+                   TextColor="White"/>
+
+            <Entry x:Name="Subject"
+                   Placeholder="Temat wiadomości"
+                   TextColor="White"/>
+
+            <Entry x:Name="Message" 
+                   Placeholder="Wiadomość" 
+                   TextColor="White"/>
+
+            <Button Style="{StaticResource Buttons}" 
+                    Text="Wyślij wiadomość" 
+                    Clicked="Button1_Clicked"/>
+
+            <Button Style="{StaticResource Buttons}" 
+                    Text="Zadzwoń" 
+                    Clicked="Button2_Clicked"/>
+
+            <Button Style="{StaticResource Buttons}" 
+                    Text="Wyślij wiadomość Email" 
+                    Clicked="Button3_Clicked"/>
+
+            <Label Style="{StaticResource Labels}" 
+                   x:Name="LabelInfo" 
+                   TextColor="White"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

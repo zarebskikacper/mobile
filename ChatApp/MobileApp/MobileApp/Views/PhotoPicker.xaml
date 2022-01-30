@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MobileApp.Views.PhotoPicker">
+    <ContentPage.Content>
+        <StackLayout Style="{StaticResource Back}">
+
+            <Frame Style="{StaticResource Frame}">
+                <Label Text="Funkcje aparatu" Style="{StaticResource Lab}" />
+            </Frame>
+
+            <Button Style="{StaticResource Buttons}" 
+                    Text="Wybierz zdjęcie" 
+                    Clicked="Button_Clicked"/>
+            
+            <Button Style="{StaticResource Buttons}" 
+                    Text="Zrób zdjęcie" 
+                    Clicked="Button1_Clicked" />
+
+            <Image x:Name="Zdjęcie"/>
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

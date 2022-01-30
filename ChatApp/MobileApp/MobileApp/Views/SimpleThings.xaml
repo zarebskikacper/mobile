@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MobileApp.Views.SimpleThings">
+    <ContentPage.Content>
+        <StackLayout Style="{StaticResource Back}">
+
+            <Frame Style="{StaticResource Frame}">
+                <Label Style="{StaticResource Lab}" 
+                       Text="Pozostałe" />
+            </Frame>
+
+            <Button Style="{StaticResource Buttons}" 
+                    Text="Uruchom Akcelerometr" 
+                    Clicked="Button_Clicked" />
+
+            <Button Style="{StaticResource Buttons}" 
+                    Text="Pobierz status Baterii" 
+                    Clicked="Button1_Clicked" />
+
+            <Button Style="{StaticResource Buttons}" 
+                    Text="Zatrzymaj pobieranie statusu Baterii" 
+                    Clicked="Button2_Clicked" />
+
+            <Button Style="{StaticResource Buttons}" 
+                    Text="Włącz latarkę" 
+                    Clicked="Button3_Clicked" />
+
+            <Button Style="{StaticResource Buttons}" 
+                    Text="Wyłącz latarkę" 
+                    Clicked="Button4_Clicked" />
+
+            <Button Style="{StaticResource Buttons}" 
+                    Text="Otwórz Plik PDF" 
+                    Clicked="Button5_Clicked" />
+
+            <Label Style="{StaticResource Labels}"
+                   x:Name="LabelInfo" TextColor="White"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

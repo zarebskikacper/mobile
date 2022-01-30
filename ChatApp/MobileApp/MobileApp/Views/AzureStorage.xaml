@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MobileApp.Views.AzureStorage">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Style="{StaticResource Back}">
+
+                <Frame Style="{StaticResource Frame}">
+                    <Label Style="{StaticResource Lab}" 
+                           Text="Azure Blob Storage" />
+                </Frame>
+
+                <Button Style="{StaticResource Buttons}" 
+                        Text="Wybierz plik lokalny" 
+                        Clicked="Button_Clicked" />
+
+                <Image x:Name="PlaceImage"/>
+
+                <Button Style="{StaticResource Buttons}" 
+                        Text="Wyślij plik" 
+                        Clicked="Button1_Clicked" />
+
+                <Label Style="{StaticResource Labels}" 
+                       x:Name="LabelInfo" 
+                       TextColor="White"/>
+
+                <Button Style="{StaticResource Buttons}" 
+                        Text="Pobierz plik" 
+                        Clicked="Button2_Clicked" />
+
+                <Button Style="{StaticResource Buttons}" 
+                        Text="Usuń plik" 
+                        Clicked="Button3_Clicked" />
+
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

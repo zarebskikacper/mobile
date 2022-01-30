@@ -10,7 +10,7 @@ namespace MobileApp
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new NavigationPage(new MainPage());
             Device.SetFlags(new string[] { "Brush_Experimental" });
         }
 

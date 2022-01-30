@@ -123,8 +123,17 @@
     <Reference Include="System.Numerics.Vectors" />
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="Azure.Storage.Blobs">
+      <Version>12.11.0-beta.2</Version>
+    </PackageReference>
     <PackageReference Include="Plugin.Fingerprint">
       <Version>2.1.5</Version>
+    </PackageReference>
+    <PackageReference Include="WindowsAzure.Storage">
+      <Version>9.3.3</Version>
+    </PackageReference>
+    <PackageReference Include="Xam.Plugin.Media">
+      <Version>5.0.1</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.Forms" Version="5.0.0.2337" />
     <PackageReference Include="Xamarin.Essentials" Version="1.7.1" />
