@@ -20,7 +20,7 @@ namespace MobileApp.Views
     public partial class AzureStorage : ContentPage
     {
         MediaFile file;
-        static string _storageConnection = "DefaultEndpointsProtocol=https;AccountName=mobileappfunc;AccountKey=AJHdxNm6IRXAS0W4i8Rhqk1FYX0T9Lu8HGmy75MjlibO4OWOyHUd6U2LFeualRdUvTooqwEAxp+2mx/mBMWa1A==;EndpointSuffix=core.windows.net";
+        static string _storageConnection = "";
         static CloudStorageAccount cloudStorageAccount = CloudStorageAccount.Parse(_storageConnection);
         static CloudBlobClient cloudBlobClient = cloudStorageAccount.CreateCloudBlobClient();
         static CloudBlobContainer cloudBlobContainer = cloudBlobClient.GetContainerReference("images");
